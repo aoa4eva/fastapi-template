@@ -160,8 +160,9 @@ ehthumbs.db
 Thumbs.db
 *~
 
-# Editor/IDE (preserve .idea/ as per user preference)
-# .idea/  # User prefers to keep this
+# Editor/IDE
+# Note: .idea/ is excluded for template sharing, but you can track it in your projects
+.idea/
 .vscode/
 *.swp
 *.swo
@@ -171,3 +172,13 @@ Thumbs.db
 # Project specific
 *.db
 *.sqlite
+
+# Template-specific excludes
+setup_repo.sh
+*.swp
+*.swo
+.DS_Store
+
+# Local development files
+.python-version
+uv.lock
