@@ -65,7 +65,7 @@ class TemplateSetup:
             self.description = description or "A FastAPI project"
             self.author = author or "Your Name"
             self.email = email or "your.email@example.com"
-            self.github_user = github_user or "yourusername"
+            self.github_user = github_user or "aoa4eva"
 
         # Derive package name (valid Python identifier)
         self.package_name = self._to_valid_package_name(self.project_name)
@@ -113,7 +113,7 @@ class TemplateSetup:
 
         self.github_user = self._prompt(
             "GitHub username",
-            default="yourusername",
+            default="aoa4eva",
         )
 
         print()
@@ -369,7 +369,7 @@ class TemplateSetup:
         content = workflow_path.read_text()
         content = content.replace("generaltemplate", self.project_name)
         content = content.replace(
-            "yourusername",
+            "aoa4eva",
             self.github_user
         )
 
@@ -396,7 +396,7 @@ class TemplateSetup:
         )
 
         # Update URLs and references
-        content = content.replace("yourusername/generaltemplate", f"{self.github_user}/{self.project_name}")
+        content = content.replace("aoa4eva/generaltemplate", f"{self.github_user}/{self.project_name}")
         content = content.replace("generaltemplate", self.package_name)
 
         readme_path.write_text(content)
@@ -440,7 +440,7 @@ def setup_template(
     description: str = "A FastAPI application",
     author: str = "Your Name",
     email: str = "your.email@example.com",
-    github_user: str = "yourusername",
+    github_user: str = "aoa4eva",
     root_dir: Optional[Path] = None,
 ) -> bool:
     """

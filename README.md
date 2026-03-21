@@ -1,6 +1,6 @@
 # FastAPI Project Template
 
-[![CI](https://github.com/yourusername/generaltemplate/workflows/CI/badge.svg)](https://github.com/yourusername/generaltemplate/actions)
+[![CI](https://github.com/aoa4eva/fastapi-template/workflows/CI/badge.svg)](https://github.com/aoa4eva/fastapi-template/actions)
 [![Python 3.13+](https://img.shields.io/badge/python-3.13+-blue.svg)](https://www.python.org/downloads/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-green.svg)](https://fastapi.tiangolo.com)
 [![Code style: ruff](https://img.shields.io/badge/code%20style-ruff-000000.svg)](https://github.com/astral-sh/ruff)
@@ -62,7 +62,7 @@ See [LIBRARY_USAGE.md](LIBRARY_USAGE.md) for programmatic usage.
 1. **Clone this template** for your new project:
 
 ```bash
-git clone https://github.com/yourusername/generaltemplate.git my-new-project
+git clone https://github.com/aoa4eva/fastapi-template.git my-new-project
 cd my-new-project
 ```
 
@@ -486,9 +486,9 @@ MIT License - see LICENSE file for details
 
 ## Support
 
-- 📖 [Documentation](https://github.com/yourusername/generaltemplate/wiki)
-- 🐛 [Issue Tracker](https://github.com/yourusername/generaltemplate/issues)
-- 💬 [Discussions](https://github.com/yourusername/generaltemplate/discussions)
+- 📖 [Documentation](https://github.com/aoa4eva/generaltemplate/wiki)
+- 🐛 [Issue Tracker](https://github.com/aoa4eva/generaltemplate/issues)
+- 💬 [Discussions](https://github.com/aoa4eva/generaltemplate/discussions)
 
 ---
 

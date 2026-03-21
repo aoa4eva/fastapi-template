@@ -7,13 +7,13 @@ The FastAPI template can be used as a Python library to programmatically set up 
 ### Option 1: From Git Repository
 
 ```bash
-pip install git+https://github.com/yourusername/generaltemplate.git
+pip install git+https://github.com/aoa4eva/generaltemplate.git
 ```
 
 ### Option 2: From Local Clone
 
 ```bash
-git clone https://github.com/yourusername/generaltemplate.git
+git clone https://github.com/aoa4eva/generaltemplate.git
 cd generaltemplate
 pip install -e .
 ```
@@ -108,7 +108,7 @@ success = setup_template(
     description=input("Enter description: "),
     author=os.environ.get("GIT_AUTHOR_NAME", "Your Name"),
     email=os.environ.get("GIT_AUTHOR_EMAIL", "your@email.com"),
-    github_user=os.environ.get("GITHUB_USER", "yourusername"),
+    github_user=os.environ.get("GITHUB_USER", "aoa4eva"),
 )
 
 sys.exit(0 if success else 1)
@@ -132,7 +132,7 @@ def main():
         description=os.environ.get("PROJECT_DESC", "A FastAPI project"),
         author=os.environ.get("AUTHOR", "Your Name"),
         email=os.environ.get("EMAIL", "your@email.com"),
-        github_user=os.environ.get("GITHUB_USER", "yourusername"),
+        github_user=os.environ.get("GITHUB_USER", "aoa4eva"),
     )
 
     return 0 if success else 1
@@ -267,7 +267,7 @@ def create_project():
             description=data.get('description', ''),
             author=data.get('author', 'Your Name'),
             email=data.get('email', 'your@email.com'),
-            github_user=data.get('github_user', 'yourusername'),
+            github_user=data.get('github_user', 'aoa4eva'),
             root_dir=project_dir,
         )
 
@@ -292,7 +292,7 @@ def setup_template(
     description: str = "A FastAPI application",
     author: str = "Your Name",
     email: str = "your.email@example.com",
-    github_user: str = "yourusername",
+    github_user: str = "aoa4eva",
     root_dir: Optional[Path] = None,
 ) -> bool:
     """
@@ -387,4 +387,4 @@ See the `examples/` directory for more usage examples:
 
 - Documentation: [README.md](README.md)
 - Setup Guide: [SETUP.md](SETUP.md)
-- Issues: https://github.com/yourusername/generaltemplate/issues
+- Issues: https://github.com/aoa4eva/generaltemplate/issues

@@ -50,9 +50,9 @@ dev = [
 generaltemplate = "generaltemplate.main:main"
 
 [project.urls]
-Homepage = "https://github.com/yourusername/generaltemplate"  # TODO: Update when using template
-Repository = "https://github.com/yourusername/generaltemplate"
-Issues = "https://github.com/yourusername/generaltemplate/issues"
+Homepage = "https://github.com/aoa4eva/generaltemplate"  # TODO: Update when using template
+Repository = "https://github.com/aoa4eva/generaltemplate"
+Issues = "https://github.com/aoa4eva/generaltemplate/issues"
 
 [build-system]
 requires = ["hatchling"]

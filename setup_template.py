@@ -48,7 +48,7 @@ class TemplateSetup:
             self.description = description or "A FastAPI project"
             self.author = author or "Your Name"
             self.email = email or "your.email@example.com"
-            self.github_user = github_user or "yourusername"
+            self.github_user = github_user or "aoa4eva"
 
         # Derive package name (valid Python identifier)
         self.package_name = self._to_valid_package_name(self.project_name)
@@ -96,7 +96,7 @@ class TemplateSetup:
 
         self.github_user = self._prompt(
             "GitHub username",
-            default="yourusername",
+            default="aoa4eva",
         )
 
         print()
@@ -388,7 +388,7 @@ class TemplateSetup:
             "generaltemplate:",
             f"{self.project_name}:"
         ).replace(
-            "yourusername/generaltemplate",
+            "aoa4eva/generaltemplate",
             f"{self.github_user}/{self.project_name}"
         )
 
@@ -418,7 +418,7 @@ class TemplateSetup:
 
         # Update repository URLs
         content = content.replace(
-            "yourusername/generaltemplate",
+            "aoa4eva/generaltemplate",
             f"{self.github_user}/{self.project_name}"
         ).replace(
             "generaltemplate/",

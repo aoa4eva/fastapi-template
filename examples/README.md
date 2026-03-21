@@ -32,7 +32,7 @@ setup_template(
     description="My project description",
     author="Your Name",
     email="your@email.com",
-    github_user="yourusername"
+    github_user="aoa4eva"
 )
 ```
 

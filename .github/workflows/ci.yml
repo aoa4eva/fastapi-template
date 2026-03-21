@@ -178,8 +178,8 @@ jobs:
   #         context: .
   #         push: true
   #         tags: |
-  #           yourusername/generaltemplate:latest
-  #           yourusername/generaltemplate:${{ github.sha }}
+  #           aoa4eva/generaltemplate:latest
+  #           aoa4eva/generaltemplate:${{ github.sha }}
   #         # For GHCR:
   #         # tags: |
   #         #   ghcr.io/${{ github.repository }}:latest

@@ -40,7 +40,7 @@ Package name [awesome_api]:
 Project description [A FastAPI application]: An awesome API for my project
 Author name [Your Name]: Jane Doe
 Author email [your.email@example.com]: jane@example.com
-GitHub username [yourusername]: janedoe
+GitHub username [aoa4eva]: janedoe
 
 Configuration Summary:
 ======================================
@@ -78,7 +78,7 @@ python setup_template.py \
 - `--description`: Project description (default: "A FastAPI application")
 - `--author`: Author name (default: "Your Name")
 - `--email`: Author email (default: "your.email@example.com")
-- `--github-user`: GitHub username (default: "yourusername")
+- `--github-user`: GitHub username (default: "aoa4eva")
 
 ## What Gets Updated
 
@@ -244,7 +244,7 @@ setup = TemplateSetup(
     description="My API project",
     author="Your Name",
     email="your@email.com",
-    github_user="yourusername",
+    github_user="aoa4eva",
     interactive=False
 )
 
