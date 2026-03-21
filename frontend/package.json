@@ -1,0 +1,16 @@
+{
+  "name": "generaltemplate-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Frontend for generaltemplate - OPTIONAL",
+  "scripts": {
+    "dev": "echo 'Setup your frontend framework here (React, Vue, etc.)'",
+    "build": "echo 'Build command not configured yet'",
+    "lint": "echo 'Linting not configured yet'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}

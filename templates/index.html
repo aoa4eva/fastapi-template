@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}Home - FastAPI Template{% endblock %}
+
+{% block description %}FastAPI project template with modern Python tooling{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>🚀 FastAPI Template</h1>
+    <p>Your modern Python API template is running!</p>
+
+    <div class="links">
+        <a href="/docs">📚 API Documentation</a>
+        <a href="/redoc">📖 ReDoc</a>
+        <a href="/api/health">💚 Health Check</a>
+    </div>
+
+    <div class="info">
+        <h3>Getting Started</h3>
+        <p><strong>Environment:</strong> {{ environment }}</p>
+        <p><strong>Debug Mode:</strong> {{ debug }}</p>
+
+        <div style="margin-top: 1rem;">
+            <p>Check out the example API endpoints:</p>
+            <ul style="list-style: none; padding: 0;">
+                <li>GET /api/items - List all items</li>
+                <li>POST /api/items - Create a new item</li>
+                <li>GET /api/items/{id} - Get item by ID</li>
+                <li>PUT /api/items/{id} - Update an item</li>
+                <li>DELETE /api/items/{id} - Delete an item</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Example: Load and display items on page load
+    async function loadItems() {
+        try {
+            const response = await fetch('/api/items');
+            const items = await response.json();
+            console.log('Loaded items:', items);
+            // You can render items in the DOM here
+        } catch (error) {
+            console.error('Failed to load items:', error);
+        }
+    }
+
+    loadItems();
+</script>
+{% endblock %}

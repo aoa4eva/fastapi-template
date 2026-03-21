@@ -1,0 +1,87 @@
+services:
+  # FastAPI application
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: generaltemplate-api
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      - ENVIRONMENT=development
+      # Database connection (uncomment when using PostgreSQL)
+      # - DATABASE_URL=postgresql://postgres:postgres@db:5432/generaltemplate
+      # Redis connection (uncomment when using Redis)
+      # - REDIS_URL=redis://redis:6379/0
+    volumes:
+      # Mount source code for hot-reload during development
+      - ./src:/app/src
+      - ./static:/app/static
+      - ./templates:/app/templates
+    depends_on:
+      # Uncomment when using database/redis
+      # - db
+      # - redis
+      pass:
+        condition: service_started
+    networks:
+      - app-network
+    restart: unless-stopped
+    command: uvicorn generaltemplate.main:app --host 0.0.0.0 --port 8000 --reload
+
+  # PostgreSQL database (commented out by default)
+  # Uncomment this service when you need a database
+  # db:
+  #   image: postgres:16-alpine
+  #   container_name: generaltemplate-db
+  #   environment:
+  #     POSTGRES_USER: postgres
+  #     POSTGRES_PASSWORD: postgres
+  #     POSTGRES_DB: generaltemplate
+  #   ports:
+  #     - "5432:5432"
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+  #   networks:
+  #     - app-network
+  #   restart: unless-stopped
+  #   healthcheck:
+  #     test: ["CMD-SHELL", "pg_isready -U postgres"]
+  #     interval: 10s
+  #     timeout: 5s
+  #     retries: 5
+
+  # Redis cache (commented out by default)
+  # Uncomment this service when you need caching/sessions
+  # redis:
+  #   image: redis:7-alpine
+  #   container_name: generaltemplate-redis
+  #   ports:
+  #     - "6379:6379"
+  #   volumes:
+  #     - redis_data:/data
+  #   networks:
+  #     - app-network
+  #   restart: unless-stopped
+  #   healthcheck:
+  #     test: ["CMD", "redis-cli", "ping"]
+  #     interval: 10s
+  #     timeout: 5s
+  #     retries: 5
+
+  # Dummy service to avoid depends_on errors when db/redis are commented out
+  pass:
+    image: tianon/true
+    container_name: generaltemplate-pass
+
+networks:
+  app-network:
+    driver: bridge
+
+# Volumes for data persistence
+# Uncomment when using database/redis
+# volumes:
+#   postgres_data:
+#   redis_data:

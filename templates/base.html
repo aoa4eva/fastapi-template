@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% block description %}FastAPI Template Application{% endblock %}">
+    <title>{% block title %}FastAPI Template{% endblock %}</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/static/style.css">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        {% block header %}
+        <nav>
+            <div class="container">
+                <h1>{{ app_name|default("FastAPI Template") }}</h1>
+            </div>
+        </nav>
+        {% endblock %}
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}
+        <div class="container">
+            <h2>Welcome to FastAPI Template</h2>
+            <p>This is the base template. Extend it in your views.</p>
+        </div>
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        {% block footer %}
+        <div class="container">
+            <p>&copy; 2024 FastAPI Template. Built with ❤️ using FastAPI.</p>
+        </div>
+        {% endblock %}
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/static/app.js"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>
