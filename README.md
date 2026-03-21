@@ -37,7 +37,7 @@ The template includes an automated setup script that configures everything:
 python setup_template.py
 ```
 
-See [SETUP.md](SETUP.md) for details.
+See [docs/SETUP.md](docs/SETUP.md) for details.
 
 **📦 Library Usage**
 
@@ -53,7 +53,7 @@ setup_template(
 )
 ```
 
-See [LIBRARY_USAGE.md](LIBRARY_USAGE.md) for programmatic usage.
+See [docs/LIBRARY_USAGE.md](docs/LIBRARY_USAGE.md) for programmatic usage.
 
 **⚙️ Manual Setup**
 
@@ -72,7 +72,7 @@ cd my-new-project
 python setup_template.py
 ```
 
-This will interactively collect your project information and update all files automatically. See [SETUP.md](SETUP.md) for details.
+This will interactively collect your project information and update all files automatically. See [docs/SETUP.md](docs/SETUP.md) for details.
 
 3. **Install dependencies**:
 
