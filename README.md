@@ -19,6 +19,28 @@ A production-ready FastAPI project template with modern Python tooling, Docker d
 - 🎭 **Frontend Flexibility** - Support for vanilla JS, React, Vue, or any framework
 - 📝 **API Documentation** - Auto-generated OpenAPI docs (Swagger UI + ReDoc)
 
+## 🎯 Using This Template
+
+### For New Projects
+
+See the complete guide: **[GETTING_STARTED.md](GETTING_STARTED.md)**
+
+**Quick version:**
+```bash
+# 1. Use "Use this template" button on GitHub
+# 2. Clone your new repo
+# 3. Run setup:
+python setup_template.py
+
+# 4. Install & run:
+./install.sh
+./run.sh
+```
+
+That's it! Visit http://localhost:8000
+
+---
+
 ## Quick Start
 
 ### Prerequisites
